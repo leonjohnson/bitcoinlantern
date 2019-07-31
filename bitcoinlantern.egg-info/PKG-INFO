@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: bitcoinlantern
+Version: 0.1.4
+Summary: A bitcoin and lightning library that focuses on wallets and rpc.
+Home-page: https://github.com/leonjohnson/bitcoinlantern
+Author: Leon Johnson
+Author-email: leon.johnson@me.com
+License: UNKNOWN
+Description: A small Bitcoin library that's delightfully easy to read and easy to use.
+Keywords: bitcoin,wallet,BIP32,hd-wallet,python
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
