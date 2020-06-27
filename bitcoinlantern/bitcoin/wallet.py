@@ -434,8 +434,13 @@ class Wallet(object):
 		return address
 	
 	
-	def createBech32(self, testnet=False, entro=None):
+	def createBech32(self, entro=None):
 		"""Reference implementation for Bech32 and segwit addresses."""
+		
+		if self.is_testnet() == True:
+			hrp = 'tb'
+		else:
+			hrp = 'bc'
 		
 		priv_key, mnemonic, binary_seed = self.createPrivateKey()
 		
@@ -448,7 +453,7 @@ class Wallet(object):
 		# hash160_pub_key = hash160(compressed_pub_key)
 		# hash160_pub_key = hash160('0279BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798')
 				
-		bc_address = self.encode('bc', 0, compressed_pub_key)		
+		bc_address = self.encode(hrp, 0, compressed_pub_key)		
 		address = Address(compressed=True, testnet=self.is_testnet(), address_str=bc_address, mnemonic=mnemonic, seed=binary_seed, address_type='Bech32')
 		self.addresses.append(address)
 		return address
