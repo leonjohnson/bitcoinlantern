@@ -18,7 +18,11 @@ PBKDF2_ROUNDS = 2048
 
 CHARSET = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
 
-
+'''
+address.string() = tb1q62xqt9hwhtd7f6erndn0r4lkef92fdcadzrd9w
+address.private_key() = KxP8HRNmxoLbgYqpqe6aStF2T6TULkwFkd4ywECh9GCtgpAXcBAe
+balance on 28th June 2020 = 0.01 tbtc
+'''
 
 class WalletType(Enum):
 	P2PKH = 1
